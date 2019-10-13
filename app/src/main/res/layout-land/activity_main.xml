@@ -3,8 +3,9 @@
 
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="50dp">
+    android:layout_height="match_parent">
+    <!--android:layout_margin="50dp"-->
+
 
 <!--
     <android.support.v7.widget.Toolbar
@@ -34,8 +35,8 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        >
+        android:layout_marginBottom="100dp">
+
 
         <LinearLayout
             android:orientation="horizontal"
@@ -48,15 +49,18 @@
                 android:id="@+id/Button"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:drawableRight="@android:drawable/ic_media_play"
                 android:text="PLAY" />
+
             <Button
                 android:id="@+id/Button1"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:drawableRight="@android:drawable/btn_star"
                 android:text="@string/new_player" />
 
         </LinearLayout>
@@ -72,14 +76,17 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_weight="1"
-                android:text="PREFERENCIES" />
+                android:drawableRight="@drawable/favorite_black_24dp"
+                android:text="@string/preferencies" />
+
             <Button
                 android:id="@+id/Button3"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_weight="1"
-                android:text="ABOUT" />
+                android:drawableRight="@android:drawable/ic_dialog_info"
+                android:text="@string/about" />
         </LinearLayout>
     </TableLayout>
 </LinearLayout>
