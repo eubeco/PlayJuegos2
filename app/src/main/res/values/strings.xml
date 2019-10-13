@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Play Juegos</string>
+    <string name="play_juegos">Play Juegos</string>
+    <string name="new_player">NEW PLAYER</string>
+    <string name="CHANGE">CHANGE</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="phone">Phone</string>
+    <string name="robotandroid">robotandroid</string>
+    <string name="camaradefotos">camaradefotos</string>
+    <string name="face">face</string>
+    <string name="Name">Name</string>
+    <string name="phonectic_name">Phonectic Name</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="email">EMail</string>
+    <string name="action_buscar">BUSCAR</string>
+    <string name="action_settings">SETTINGS</string>
+    <string name="action_add">ADD</string>
+    <string-array name="spinner_name">
+        <item>Item One</item>
+        <item>Item Two</item>
+        <item>Item Three</item>
+    </string-array>
+
+</resources>
