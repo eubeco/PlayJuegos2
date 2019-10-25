@@ -20,10 +20,10 @@ class Plataformas : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.games)
+        setContentView(R.layout.plataformas)
 
 
-        val boton = findViewById(R.id.FAB1) as FloatingActionButton
+     /*   val boton = findViewById(R.id.FAB1) as FloatingActionButton
         boton.setOnClickListener(object : View.OnClickListener {
 
 
@@ -58,7 +58,7 @@ class Plataformas : AppCompatActivity() {
                 ).show()
 
             }
-        })
+        })*/
 
 
 
