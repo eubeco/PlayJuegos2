@@ -28,6 +28,16 @@ class MainActivity : AppCompatActivity() {
 
         val titulo = findViewById(R.id.titulo) as TextView
         titulo.setTypeface(Typeface.createFromAsset(assets, "Courgette-Regular.ttf"))
+
+        val preferencias = findViewById(R.id.Button2) as Button
+        preferencias.setOnClickListener {
+            lanzarPreferencias()
+        }
+
+        val games = findViewById(R.id.Button) as Button
+        games.setOnClickListener{
+            lanzarGames()
+        }
     }
 
     fun lanzarNewPlayer(){
@@ -35,6 +45,15 @@ class MainActivity : AppCompatActivity() {
         startActivity(i)
     }
 
+    fun lanzarPreferencias(){
+        val j = Intent(this, Preference::class.java)
+        startActivity(j)
+    }
+
+    fun lanzarGames(){
+        val k = Intent(this, Games::class.java)
+        startActivity(k)
+    }
    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main,menu)
         return true
@@ -43,11 +62,18 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id=item.getItemId()
         if(id==R.id.action_buscar) {
-            Toast.makeText(this, "Búsqueda", Toast.LENGTH_LONG).show()
+            /*Toast.makeText(this, "Búsqueda", Toast.LENGTH_LONG).show()*/
+
+            lanzarPlataformas()
+
             return true
         }
 
         return super.onOptionsItemSelected(item)
+    }
+    fun lanzarPlataformas(){
+        val l = Intent(this, Plataformas::class.java)
+        startActivity(l)
     }
 
 }

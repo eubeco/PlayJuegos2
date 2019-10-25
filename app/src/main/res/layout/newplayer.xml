@@ -26,12 +26,25 @@
                     android:contentDescription="@string/face"
                     android:src="@drawable/face"></ImageView>
 
-                <EditText
-                    android:id="@+id/EditText_Name"
-                    android:hint="@string/Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"></EditText>
+                <!-- He probado así como se ve descomentando lo comentado y exactamente como pone en los apuntes y no se ejecuta el layout, cuando vas a acceder mediante el botón
+                     de nuevo jugador la aplicación peta.
+                     En el archivo de dependencias también he probado varias cosas, pero al final lo he dejado todo comentado porque no ejecutaba.
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/TiLayout_Name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                -->
+                    <EditText
+                        android:id="@+id/EditText_Name"
+                        android:hint="@string/Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:autofillHints="no"></EditText>
+
+                <!--</android.support.design.widget.TextInputLayout>-->
+
             </LinearLayout>
 
             <LinearLayout

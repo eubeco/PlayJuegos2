@@ -17,10 +17,18 @@
     <string name="action_add">ADD</string>
     <string name="preferencies">PREFERENCIES</string>
     <string name="about">ABOUT</string>
+    <string name="elige_una_opc">Elige una opción:</string>
+    <string name="dragon_fly">Dragon fly</string>
+    <string name="hill_climbing_racing">Hill climbing racing</string>
+    <string name="pocket_soccer">Pocket soccer</string>
+    <string name="radiant_defense">Radiant defense</string>
+    <string name="angry_birds">Angry Birds</string>
+    <string name="ninja_jump">Ninja Jump</string>
+    <string name="search">SEARCH</string>
     <string-array name="spinner_name">
-        <item>Item One</item>
-        <item>Item Two</item>
-        <item>Item Three</item>
+        <item>Teléfono Móvil</item>
+        <item>Teléfono Fijo</item>
+        <item>Otro Teléfono</item>
     </string-array>
 
 </resources>

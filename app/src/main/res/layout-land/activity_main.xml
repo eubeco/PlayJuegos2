@@ -76,7 +76,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_weight="1"
-                android:drawableRight="@drawable/favorite_black_24dp"
+                android:drawableRight="@mipmap/ic_heart"
                 android:text="@string/preferencies" />
 
             <Button
