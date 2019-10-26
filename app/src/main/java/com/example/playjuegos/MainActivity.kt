@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.plataformas.*
 import com.example.playjuegos.R.layout.activity_main as layoutActivity_main
 
 
@@ -22,22 +23,37 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(layoutActivity_main)
 
-        val jugador = findViewById(R.id.Button1) as Button
-        jugador.setOnClickListener{ lanzarNewPlayer()
-        }
-
         val titulo = findViewById(R.id.titulo) as TextView
         titulo.setTypeface(Typeface.createFromAsset(assets, "Courgette-Regular.ttf"))
 
+        val jugador = findViewById(R.id.Button1) as Button
+        jugador.setOnClickListener{ lanzarNewPlayer()
+        }
         val preferencias = findViewById(R.id.Button2) as Button
         preferencias.setOnClickListener {
             lanzarPreferencias()
         }
-
         val games = findViewById(R.id.Button) as Button
         games.setOnClickListener{
             lanzarGames()
         }
+        val topBar = findViewById(R.id.toolbar) as androidx.appcompat.widget.Toolbar
+        setSupportActionBar(topBar)
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id=item.getItemId()
+        if(id==R.id.action_buscar) {
+            lanzarPlataformas()
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     fun lanzarNewPlayer(){
@@ -54,24 +70,8 @@ class MainActivity : AppCompatActivity() {
         val k = Intent(this, Games::class.java)
         startActivity(k)
     }
-   override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main,menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id=item.getItemId()
-        if(id==R.id.action_buscar) {
-            /*Toast.makeText(this, "Búsqueda", Toast.LENGTH_LONG).show()*/
-
-            lanzarPlataformas()
-
-            return true
-        }
-
-        return super.onOptionsItemSelected(item)
-    }
     fun lanzarPlataformas(){
+        /*Toast.makeText(this, "Lanzar Plataformas", Toast.LENGTH_LONG).show()*/
         val l = Intent(this, Plataformas::class.java)
         startActivity(l)
     }

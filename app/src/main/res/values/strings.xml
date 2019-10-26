@@ -25,6 +25,24 @@
     <string name="angry_birds">Angry Birds</string>
     <string name="ninja_jump">Ninja Jump</string>
     <string name="search">SEARCH</string>
+    <string name="plataformas">Plataformas:</string>
+    <string name="ps4">PS4</string>
+    <string name="pc">PC</string>
+    <string name="xbox">XBOX</string>
+    <string name="wii">WII</string>
+    <string name="wiiu">WIIU</string>
+    <string name="_3ds">3DS</string>
+    <string name="x360">X360</string>
+    <string name="g_neros">Géneros:</string>
+    <string name="estrategia">Estrategia</string>
+    <string name="acci_n">Acción</string>
+    <string name="disparos">Disparos</string>
+    <string name="deportes">Deportes</string>
+    <string name="aventura">Aventura</string>
+    <string name="simulaci_n">Simulación</string>
+    <string name="lucha">Lucha</string>
+    <string name="rol">Rol</string>
+    <string name="musical">Musical</string>
     <string-array name="spinner_name">
         <item>Teléfono Móvil</item>
         <item>Teléfono Fijo</item>
