@@ -36,8 +36,7 @@ class About: AppCompatActivity()  {
 
         listaUsers.setOnItemClickListener(object : AdapterView.OnItemClickListener {
             override fun onItemClick(parent: AdapterView<*>, v: View, position: Int, id: Long) {
-                var tupla_sel = usuarios.get(position-1)
-                Toast.makeText(this@About, tupla_sel.nombre, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@About, usuarios.get(position-1).nombre, Toast.LENGTH_SHORT).show()
 
             }
         })
