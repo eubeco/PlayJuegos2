@@ -3,16 +3,11 @@ import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
-import android.view.ActionMode
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-import android.widget.Toolbar
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.plataformas.*
+
 import com.example.playjuegos.R.layout.activity_main as layoutActivity_main
 
 
@@ -26,17 +21,25 @@ class MainActivity : AppCompatActivity() {
         val titulo = findViewById(R.id.titulo) as TextView
         titulo.setTypeface(Typeface.createFromAsset(assets, "Courgette-Regular.ttf"))
 
-        val jugador = findViewById(R.id.Button1) as Button
+        val jugador = findViewById(R.id.Button1) as com.google.android.material.button.MaterialButton
         jugador.setOnClickListener{ lanzarNewPlayer()
         }
-        val preferencias = findViewById(R.id.Button2) as Button
+        val preferencias = findViewById(R.id.Button2) as com.google.android.material.button.MaterialButton
         preferencias.setOnClickListener {
             lanzarPreferencias()
         }
-        val games = findViewById(R.id.Button) as Button
+        val games = findViewById(R.id.Button) as com.google.android.material.button.MaterialButton
         games.setOnClickListener{
             lanzarGames()
         }
+        val btn_about = findViewById(R.id.Button3) as com.google.android.material.button.MaterialButton
+        btn_about.setOnClickListener{
+            lanzarAbout()
+        }
+
+
+
+
         val topBar = findViewById(R.id.toolbar) as androidx.appcompat.widget.Toolbar
         setSupportActionBar(topBar)
 
@@ -74,6 +77,10 @@ class MainActivity : AppCompatActivity() {
         /*Toast.makeText(this, "Lanzar Plataformas", Toast.LENGTH_LONG).show()*/
         val l = Intent(this, Plataformas::class.java)
         startActivity(l)
+    }
+    fun lanzarAbout(){
+        val m = Intent(this, About::class.java)
+        startActivity(m)
     }
 
 }

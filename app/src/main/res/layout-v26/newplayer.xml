@@ -153,8 +153,8 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginLeft="55dp"
-                        android:layout_gravity="right"
-                        android:entries="@array/spinner_name">
+                        android:layout_gravity="right">
+                        <!--android:entries="@array/spinner_name">-->
 
                     </Spinner>
                 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.playjuegos
 
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -12,12 +13,18 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.os.Handler
 import android.widget.Button
+import androidx.core.view.marginBottom
+import androidx.core.view.setPadding
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
+import com.google.android.material.snackbar.Snackbar
 
 
 class Plataformas : AppCompatActivity() {
+    private val handler: Handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,60 +35,16 @@ class Plataformas : AppCompatActivity() {
         setSupportActionBar(bar)
 
 
-        val chip_3ds = findViewById(R.id.chip_3ds) as Chip
-        val chip_pc = findViewById(R.id.chip_pc) as Chip
-        val chip_ps4 = findViewById(R.id.chip_ps4) as Chip
-        val chip_wii = findViewById(R.id.chip_wii) as Chip
-        val chip_wiiu = findViewById(R.id.chip_wiiu) as Chip
-        val chip_x360 = findViewById(R.id.chip_x360) as Chip
-        val chip_xbox = findViewById(R.id.chip_xbox) as Chip
-
         FAB.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
 
-                if (chip_3ds.isChecked()){
-                    Toast.makeText(
-                        applicationContext, R.string._3ds,
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-                if (chip_pc.isChecked()){
-                    Toast.makeText(
-                        applicationContext, R.string.pc,
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-                if (chip_ps4.isChecked()){
-                    Toast.makeText(
-                        applicationContext, R.string.ps4,
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-                if (chip_wii.isChecked()){
-                    Toast.makeText(
-                        applicationContext, R.string.wii ,
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-                if (chip_wiiu.isChecked()){
-                    Toast.makeText(
-                        applicationContext, R.string.wiiu,
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-                if (chip_x360.isChecked()){
-                    Toast.makeText(
-                        applicationContext, R.string.x360,
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-                if (chip_xbox.isChecked()){
-                    Toast.makeText(
-                        applicationContext, R.string.xbox,
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
 
+                val mySnackbar = Snackbar.make(findViewById(R.id.myCoordinatorLayout),
+                    R.string.snackbar , Snackbar.LENGTH_SHORT)
+                mySnackbar.setAction("Action",View.OnClickListener {
+
+                })
+                mySnackbar.show()
             }
         })
 
@@ -91,6 +54,92 @@ class Plataformas : AppCompatActivity() {
 
 
 
+        val chip_3ds = findViewById(R.id.chip_3ds) as Chip
+        val chip_pc = findViewById(R.id.chip_pc) as Chip
+        val chip_ps4 = findViewById(R.id.chip_ps4) as Chip
+        val chip_wii = findViewById(R.id.chip_wii) as Chip
+        val chip_wiiu = findViewById(R.id.chip_wiiu) as Chip
+        val chip_x360 = findViewById(R.id.chip_x360) as Chip
+        val chip_xbox = findViewById(R.id.chip_xbox) as Chip
+
+        val chipGroup = findViewById(R.id.chip_group_plataformas) as ChipGroup
+
+        chip_3ds.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+
+                Toast.makeText(
+                    applicationContext, R.string._3ds,
+                    Toast.LENGTH_LONG
+                ).show()
+
+            }
+        })
+        chip_pc.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+
+
+                Toast.makeText(
+                    applicationContext, R.string.pc,
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+
+        })
+        chip_ps4.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+
+
+                Toast.makeText(
+                    applicationContext, R.string.ps4,
+                    Toast.LENGTH_LONG
+                ).show()
+
+            }
+        })
+        chip_wii.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+
+
+                Toast.makeText(
+                    applicationContext, R.string.wii,
+                    Toast.LENGTH_LONG
+                ).show()
+
+            }
+        })
+        chip_wiiu.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+
+
+                Toast.makeText(
+                    applicationContext, R.string.wiiu,
+                    Toast.LENGTH_LONG
+                ).show()
+
+            }
+        })
+        chip_x360.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+
+
+                Toast.makeText(
+                    applicationContext, R.string.x360,
+                    Toast.LENGTH_LONG
+                ).show()
+
+            }
+        })
+        chip_xbox.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+
+
+                Toast.makeText(
+                    applicationContext, R.string.xbox,
+                    Toast.LENGTH_LONG
+                ).show()
+
+            }
+        })
 
 
         val btn_accion = findViewById(R.id.button1) as Button
@@ -186,4 +235,5 @@ class Plataformas : AppCompatActivity() {
     }
 
 }
+
 

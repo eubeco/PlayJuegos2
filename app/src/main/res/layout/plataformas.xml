@@ -1,167 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myCoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/plataformas"
-        android:textSize="@dimen/fontSizeLarge"/>
-
-    <com.google.android.material.chip.ChipGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_ps4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ps4"/>
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_pc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pc"/>
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_xbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/xbox"/>
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_wii"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/wii"/>
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_wiiu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/wiiu"/>
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_3ds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_3ds"/>
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_x360"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/x360"/>
-    </com.google.android.material.chip.ChipGroup>
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="200dp">
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_marginTop="10dp"
+            android:text="@string/plataformas"
+            android:textSize="@dimen/fontSizeLarge"/>
 
-            <TextView
-                android:id="@+id/textView4"
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_plataformas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_ps4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/ps4"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_pc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/pc"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_xbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/xbox"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_wii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/wii"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_wiiu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/wiiu"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_3ds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/_3ds"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_x360"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/x360"/>
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/g_neros"
+            android:textSize="@dimen/fontSizeLarge"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/g_neros"
-                android:textSize="@dimen/fontSizeLarge"/>
+                android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/acci_n"
-                android:textSize="@dimen/fontSizeMedium"/>
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/aventura"
-                android:textSize="@dimen/fontSizeMedium"/>
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/deportes"
-                android:textSize="@dimen/fontSizeMedium"/>
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/acci_n"
+                    android:textSize="@dimen/fontSizeMedium"/>
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/disparos"
-                android:textSize="@dimen/fontSizeMedium"/>
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/aventura"
+                    android:textSize="@dimen/fontSizeMedium"/>
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/estrategia"
-                android:textSize="@dimen/fontSizeMedium"/>
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/deportes"
+                    android:textSize="@dimen/fontSizeMedium"/>
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/lucha"
-                android:textSize="@dimen/fontSizeMedium"/>
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/disparos"
+                    android:textSize="@dimen/fontSizeMedium"/>
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/musical"
-                android:textSize="@dimen/fontSizeMedium"/>
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/estrategia"
+                    android:textSize="@dimen/fontSizeMedium"/>
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/rol"
-                android:textSize="@dimen/fontSizeMedium"/>
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/lucha"
+                    android:textSize="@dimen/fontSizeMedium"/>
 
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/simulaci_n"
-                android:textSize="@dimen/fontSizeMedium"/>
-        </LinearLayout>
-    </ScrollView>
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/musical"
+                    android:textSize="@dimen/fontSizeMedium"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/FAB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_anchor="@id/Bar"
-        app:elevation="10dp"
-        app:backgroundTint="@color/colorPrimaryDark"
-        />
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/rol"
+                    android:textSize="@dimen/fontSizeMedium"/>
 
-   <com.google.android.material.bottomappbar.BottomAppBar
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/simulaci_n"
+                    android:textSize="@dimen/fontSizeMedium"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
-        android:id="@+id/Bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:fabAlignmentMode="center"
-        android:layout_gravity="bottom"
-        style="@style/Widget.MaterialComponents.BottomAppBar"
-        app:backgroundTint="@color/colorPrimary"
-        app:navigationIcon="@android:drawable/btn_plus"
-        />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/Bar"
+            app:layout_anchorGravity="top"
+            app:elevation="30dp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:srcCompat="@android:drawable/ic_input_add"
+
+            />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+
+            android:id="@+id/Bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:fabAlignmentMode="center"
+            android:layout_gravity="bottom"
+            style="@style/Widget.MaterialComponents.BottomAppBar"
+            app:backgroundTint="@color/colorAccent"
+            />
 
 
 

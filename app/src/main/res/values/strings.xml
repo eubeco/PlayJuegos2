@@ -43,10 +43,14 @@
     <string name="lucha">Lucha</string>
     <string name="rol">Rol</string>
     <string name="musical">Musical</string>
+    <string name="play">PLAY</string>
+    <string name="snackbar">El botón se desplaza hacia arriba</string>
     <string-array name="spinner_name">
-        <item>Teléfono Móvil</item>
-        <item>Teléfono Fijo</item>
-        <item>Otro Teléfono</item>
+        <item>Teléfono 1</item>
+        <item>Teléfono 2</item>
+        <item>Teléfono 3</item>
+        <item>Teléfono 4</item>
+        <item>Teléfono 5</item>
     </string-array>
 
 </resources>
