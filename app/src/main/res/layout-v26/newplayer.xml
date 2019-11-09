@@ -3,7 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,21 +26,24 @@
                     android:src="@drawable/face"></ImageView>
 
 
-<!--
-                <android.support.design.widget.TextInputLayout
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
                     android:id="@+id/TiLayout_Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
--->
 
-                    <EditText
+
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/EditText_Name"
                         android:hint="@string/Name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"                        ></EditText>
+                        android:inputType="text"></com.google.android.material.textfield.TextInputEditText>
 
-                <!--</android.support.design.widget.TextInputLayout>-->
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -51,14 +53,19 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/EditText_PhonecticName"
-                    android:hint="@string/phonectic_name"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TiLayout_PhoneticName"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="55dp"
-                    android:inputType="text"></EditText>
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EditText_PhonecticName"
+                        android:hint="@string/phonectic_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:inputType="text"></com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -68,13 +75,18 @@
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/EditText_NickName"
-                    android:hint="@string/nick_name"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TiLayout_NickName"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="55dp"
-                    android:inputType="text"></EditText>
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EditText_NickName"
+                        android:hint="@string/nick_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:inputType="text"></com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -122,21 +134,25 @@
                     android:orientation="horizontal">
 
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/phone"
-                    android:src="@drawable/phone"></ImageView>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/phone"
+                        android:src="@drawable/phone"></ImageView>
 
 
-
-
-                    <EditText
-                        android:id="@+id/EditText_Phone"
-                        android:hint="@string/phone"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TiLayout_Phone"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:inputType="phone"></EditText>
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/EditText_Phone"
+                            android:hint="@string/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="phone"></com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -154,7 +170,8 @@
                         android:layout_marginBottom="10dp"
                         android:layout_marginLeft="55dp"
                         android:layout_gravity="right">
-                        <!--android:entries="@array/spinner_name">-->
+                        <!--android:entries="@array/spinner_name"-->
+
 
                     </Spinner>
                 </LinearLayout>
@@ -174,14 +191,19 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/e_mail"
                     android:src="@drawable/email"></ImageView>
-
-                <EditText
-                    android:id="@+id/EditText_EMail"
-                    android:hint="@string/email"
-                    android:autofillHints="@string/email"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TiLayout_EMail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"></EditText>
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EditText_EMail"
+                        android:hint="@string/email"
+                        android:autofillHints="@string/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"></com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
